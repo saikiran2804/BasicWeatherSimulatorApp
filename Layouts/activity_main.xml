@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/Light_Blue">
+
+        <TextView
+            android:id="@+id/tv_service_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:text="Service Status: Stopped"
+
+            android:textColor="@color/Dark_Blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_start_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/startService"
+                android:backgroundTint="@color/Medium_Blue"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_stop_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stopService"
+                android:backgroundTint="@color/Medium_Blue"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Input Field for Custom Weather Alert -->
+        <EditText
+            android:id="@+id/etCustomAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="@string/enterAlert"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            />
+
+        <!-- Send Weather Alert Button -->
+        <Button
+            android:id="@+id/btnSendAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sendAlert"
+            android:backgroundTint="@color/Medium_Blue"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/tvWeatherUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weatherUpdates"
+            android:textSize="16sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/btnStartPeriodicTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/startPeriodic"
+                android:backgroundTint="@color/Medium_Blue"
+                android:textColor="@color/white"
+                android:layout_marginBottom="25dp" />
+
+            <Button
+                android:id="@+id/btnStopPeriodicTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stopPeriodic"
+                android:backgroundTint="@color/Medium_Blue"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
